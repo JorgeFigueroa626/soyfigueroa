@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0 user-scalable=no"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="estilo.css" />
+    <title>JF Portafolio</title>
+    <link
+      rel="shortcut icon"
+      href="img/perfil_github.jpg"
+      type="image/x-icon"
+    />
+  </head>
+
+  <body>
+    <!-- SECCION I N I C I O -->
+    <section id="inicio">
+      <div class="contenido">
+        <header>
+          <div class="contenido-header">
+            <h1>/JF/</h1>
+            <nav id="nav" class="">
+              <ul id="links">
+                <li>
+                  <a
+                    href="#inicio"
+                    class="seleccionado"
+                    onclick="seleccionar(this)"
+                    >INICIO</a
+                  >
+                </li>
+                <li>
+                  <a href="#sobremi" onclick="seleccionar(this)">SOBRE MI</a>
+                </li>
+                <li>
+                  <a href="#servicios" onclick="seleccionar(this)">SERVICIOS</a>
+                </li>
+                <li>
+                  <a href="#portfolio" onclick="seleccionar(this)">PORTFOLIO</a>
+                </li>
+                <li>
+                  <a href="#contacto" onclick="seleccionar(this)">CONTACTO</a>
+                </li>
+              </ul>
+            </nav>
+
+            <!-- Icono del menu responsive -->
+            <div id="icono-nav" onclick="responsiveMenu()">
+              <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <div class="redes">
+              <a href="https://github.com/JorgeFigueroa626"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+              <a href="https://www.linkedin.com/in/jorge-figueroa-pro/"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
+
+              <a href="https://m.me/jorgeluis.figueroaespinoza"
+                ><i class="fa-brands fa-facebook-messenger"></i
+              ></a>
+              <a href="https://api.whatsapp.com/send?phone=75369196"
+                ><i class="fa-brands fa-whatsapp"></i
+              ></a>
+              <a href="mailto:jlfigueroa626@gmail.com"
+                ><i class="fa-solid fa-envelope"></i
+              ></a>
+            </div>
+          </div>
+        </header>
+        <div class="presentacion">
+          <p class="bienvenida">Bienvenidos</p>
+          <h2>Soy <span>Jorge Figueroa</span>, Desarrollador Frontend</h2>
+
+          <a href="#portfolio">Ir a Portafolio</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCION S O B R E M I -->
+    <section id="sobremi">
+      <div class="contenedor-foto">
+        <img src="img/perfil_github.jpg" alt="" />
+      </div>
+      <div class="sobremi">
+        <p class="titulo-seccion">Sobre Mi</p>
+        <h2>Hola, Soy <span>Jorge Figueroa</span></h2>
+        <h4>Desarrollador Frontend</h4>
+        <br />
+        <h4>
+          Soy una persona con la experiencia del desarrollo de un software a
+          medida y las aplicaciones de la arquitectura y me encanta el trabajo
+          en equipo con el uso de diversas herramientas, me adapto rápido a la
+          metodología de trabajos
+        </h4>
+
+        <a href="img/CV_Jorge_Figueroa_Espinoza.pdf">Descargar CV</a>
+      </div>
+    </section>
+
+    <!-- SECCION MI EXPERIENCIAS -->
+    <section id="servicios">
+      <h6 class="titulo-seccion">HABILIDADES</h6>
+      <br />
+      <h4 class="titulo-seccion">MI EXPERIENCIAS</h4>
+      <div class="fila">
+        <div class="servicio">
+          <span class="icono"> <i class="fa-solid fa-code"></i></span>
+          <h4>Desarollo de Frontend</h4>
+          <hr />
+          <ul class="servicios-tag">
+            <article>
+              <div>
+                <h4>HTML</h4>
+                <small>Experimentado</small>
+              </div>
+            </article>
+
+            <article>
+              <div>
+                <h4>CSS</h4>
+                <small>Intermedio</small>
+              </div>
+            </article>
+            <!-- <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li> -->
+          </ul>
+          <br />
+          <ul class="servicios-tag">
+            <!-- <li>Dart</li>
+            -->
+            <article>
+              <div>
+                <h4>JavaScript</h4>
+                <small>Experimentado</small>
+              </div>
+            </article>
+            <article>
+              <div>
+                <h4>Dart</h4>
+                <small>Experimentado</small>
+              </div>
+            </article>
+          </ul>
+           <br />
+          <ul class="servicios-tag">
+            <article>
+              <div>
+                <h4>C++</h4>
+                <small>Experimentado</small>
+              </div>
+            </article>
+
+            <article>
+              <div>
+                <h4>C#</h4>
+                <small>Intermedio</small>
+              </div>
+            </article>
+            <!-- <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li> -->
+          </ul>
+          <br />
+        </div>
+
+        <div class="servicio">
+          <span class="icono"> <i class="fa-solid fa-code"></i></span>
+          <h4>Frameword y Librerias</h4>
+          <hr />
+          <ul class="servicios-tag">
+            <article>
+              <div>
+                <h4>Laravel</h4>
+                <small>Experimentado</small>
+              </div>
+            </article>
+            <article>
+              <div>
+                <h4>Flutter</h4>
+                <small>Experimentado</small>
+              </div>
+            </article>
+            <!-- <li>Laravel</li>
+            <li>Flutter</li> -->
+          </ul>
+          <br />
+          <ul class="servicios-tag">
+            <article>
+              <div>
+                <h4>Boostrap</h4>
+                <small>Experimentado</small>
+              </div>
+            </article>
+            <article>
+              <div>
+                <h4>React</h4>
+                <small>Intermedio</small>
+              </div>
+            </article>
+            <!-- <li>Boostrap</li>
+            <li>React</li> -->
+          </ul>
+        </div>
+
+        <div class="servicio">
+          <span class="icono"><i class="fa-solid fa-database"></i></span>
+          <h4>Desarollo de Backend</h4>
+          <hr />
+          <ul class="servicios-tag">
+            <article>
+              <div>
+                <h4>PHP</h4>
+                <small>Experimentado</small>
+              </div>
+            </article>
+            <article>
+              <div>
+                <h4>SQL Server</h4>
+                <small>Experimentado</small>
+              </div>
+            </article>
+            <!-- <li>PHP</li>
+            <li>SQL Server</li>
+            <li>MySQL</li> -->
+          </ul>
+          <br />
+          <ul class="servicios-tag">
+            <article>
+              <div>
+                <h4>MySQL</h4>
+                <small>Experimentado</small>
+              </div>
+            </article>
+            <article>
+              <div>
+                <h4>FIREBASE</h4>
+                <small>Intermedio</small>
+              </div>
+            </article>
+            <!-- <li>Python</li>
+            <li>Node JS</li> -->
+          </ul>
+          <br />
+          <ul class="servicios-tag">
+            <article>
+              <div>
+                <h4>Python</h4>
+                <small>Basico</small>
+              </div>
+            </article>
+            <article>
+              <div>
+                <h4>Node JS</h4>
+                <small>Intermedio</small>
+              </div>
+            </article>
+            <!-- <li>Python</li>
+            <li>Node JS</li> -->
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCION S E R V I C I O S -->
+    <section id="servicios">
+      <h4 class="titulo-seccion">MIS SERVICIOS</h4>
+      <div class="fila">
+        <div class="servicio">
+          <span class="icono"> <i class="fa-solid fa-code"></i></span>
+          <h4>Desarrollo web</h4>
+          <hr />
+          <h5>Desarrollo de apis y Backend con Laravel.</h5>
+          <br />
+          <h5 class="mx-auto" style="width: 300px">
+            Manejo de bases de datos relacionales con SQL Server y MySQL.
+          </h5>
+          <br />
+          <h5 class="mx-auto" style="width: 270px">
+            Implementación de Servidor Web y de Correo para Linux.
+          </h5>
+          <br />
+          <h5 class="mx-auto" style="width: 270px">
+            Desarrollo de Sistemas Web para todo tipo de negocio.
+          </h5>
+          <br />
+          <h5>Asesoría en documentación de software.</h5>
+        </div>
+        <div class="servicio">
+          <span class="icono"><i class="fa-solid fa-file-code"></i></span>
+          <h4>Diseño IU/UX</h4>
+          <hr />
+          <h5 class="mx-auto" style="width: 260px">
+            Habilidad en maquetado y diseño responsive.
+          </h5>
+          <br />
+          <h5 class="mx-auto" style="width: 270px">
+            Diseño de interfaz de usuario para software de escritorio.
+          </h5>
+          <br />
+          <h5 class="mx-auto" style="width: 250px">
+            Diseño de aplicaciones móviles mediante Flutter.
+          </h5>
+          <br />
+          <h5 class="mx-auto" style="width: 300px">
+            Análisis, reporte y Estadística de Dato
+          </h5>
+          <br />
+          <h5 class="mx-auto" style="width: 240px">
+            Diagramas para Sistemas de software mediante UML.
+          </h5>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCION PORTAFOLIO -->
+    <section id="portfolio">
+      <h4 class="titulo-seccion">Mis Proyectos</h4>
+      <div class="fila">
+        <!-- fdghf -->
+
+        <div class="card">
+          <img src="img/porfoliovetasonline.jpg" class="card__img" />
+          <h2 class="card__title">Sistema de venta Online</h2>
+          <a href="#" class="card_cta">GitHub</a>
+        </div>
+
+        <!-- fghf -->
+        <div class="card">
+          <img src="img/porfolioregistroventa.png" class="card__img" />
+          <h2 class="card__title">Sistema de Registro de Ventas</h2>
+          <a href="https://github.com/JorgeFigueroa626/registro_ventas_php.git"
+            class="card_cta"
+            >GitHub</a
+          >
+        </div>
+
+        <!-- fghf -->
+        <div class="card">
+          <img src="img/porfolioregistroempleado.png" class="card__img" />
+          <h2 class="card__title">Sistema de Registro de Empleados</h2>
+          <a href="https://github.com/JorgeFigueroa626/sistema_registro_empleados.git" class="card_cta">GitHub</a>
+        </div>
+
+        <!-- <div class="proyecto">
+          <div class="overlay"></div>
+          <img src="img/porfolioregistroventa.png" alt="" />
+          <div class="info">
+            <h4>Sistema de Registro de Ventas</h4>
+            <p>Diseño Web</p>
+          </div>
+        </div>
+         -->
+      </div>
+      <div class="fila">
+        <!-- fghf -->
+        <div class="card">
+          <img src="img/redsocial.png" class="card__img" />
+          <h2 class="card__title">App de Red Social - Android</h2>
+          <a href="#" class="card_cta">GitHub</a>
+        </div>
+
+        <!-- fghf -->
+        <div class="card">
+          <img src="img/cartshopin.png" class="card__img" />
+          <h2 class="card__title">App de venta Autos - Flutter</h2>
+          <a
+            href="https://github.com/JorgeFigueroa626/flutter_venta_autos.git"
+            class="card_cta"
+            >GitHub</a
+          >
+        </div>
+
+        <!-- fghf -->
+        <div class="card">
+          <img src="img/desktop.png" class="card__img" />
+          <h2 class="card__title">Sistema de Web - Flutter</h2>
+          <a
+            href="https://github.com/JorgeFigueroa626/flutter_pagina_web.git"
+            class="card_cta"
+            >GitHub</a
+          >
+        </div>
+
+        <!-- <div class="proyecto">
+          <div class="overlay"></div>
+          <img src="img/redsocial.png" alt="" />
+          <div class="info">
+            <h4>App de Red Social</h4>
+            <p>Diseño Web</p>
+          </div>
+        </div> -->
+      </div>
+    </section>
+
+    <!-- SECCION H A B I L I D A D E S -->
+    <section id="#contacto">
+      <div class="contenedor-skills" id="skills">
+        <h4 class="titulo-seccion">LENGUAJES DE PROGRAMACION</h4>
+        <div class="skill">
+          <div class="info">
+            <p><i class="lista fa-brands fa-html5"></i> HTML</p>
+            <span class="porcentaje">95%</span>
+          </div>
+
+          <div class="barra">
+            <div class="" id="html"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <div class="info">
+            <p><i class="lista fa-brands fa-css3"></i> Css</p>
+            <span class="porcentaje">85%</span>
+          </div>
+
+          <div class="barra">
+            <div class="" id="ps"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <div class="info">
+            <p><i class="lista fa-brands fa-js"></i> Javascript</p>
+            <span class="porcentaje">90%</span>
+          </div>
+
+          <div class="barra">
+            <div class="" id="js"></div>
+          </div>
+        </div>
+
+        <div class="skill">
+          <div class="info">
+            <p><i class="lista fa-brands fa-php"></i> PHP</p>
+            <span class="porcentaje">90%</span>
+          </div>
+
+          <div class="barra">
+            <div class="" id="ph"></div>
+          </div>
+        </div>
+
+        <div class="skill">
+          <div class="info">
+            <p><i class="lista fa-solid fa-cube"></i> Dart</p>
+            <span class="porcentaje">90%</span>
+          </div>
+
+          <div class="barra">
+            <div class="porcentaje" id="dr"></div>
+          </div>
+        </div>
+
+        <div class="skill">
+          <div class="info">
+            <p><i class="lista fa-brands fa-laravel"></i> Flutter -Laravel</p>
+            <span class="porcentaje">85%</span>
+          </div>
+
+          <div class="barra">
+            <div class="porcentaje" id="fr"></div>
+          </div>
+        </div>
+
+        <div class="skill">
+          <div class="info">
+            <p><i class="lista fa-solid fa-database"></i> MySQL - SQL Server</p>
+            <span class="porcentaje">85%</span>
+          </div>
+          <div class="barra">
+            <div class="" id="bd"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECCION FOOTER -->
+      <footer>
+        <br />
+        <nav class="redes">
+          <a href="#inicio" class="seleccionado" onclick="seleccionar(this)"
+            >INICIO</a
+          >
+          <a href="#sobremi" onclick="seleccionar(this)">SOBRE MI</a>
+          <a href="#servicios" onclick="seleccionar(this)">SERVICIOS</a>
+          <a href="#portfolio" onclick="seleccionar(this)">PORTFOLIO</a>
+          <a href="#contacto" onclick="seleccionar(this)">CONTACTO</a>
+        </nav>
+        <br />
+        <div class="redes">
+          <a href="https://github.com/JorgeFigueroa626"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+          <a href="https://www.linkedin.com/in/jorge-figueroa-pro/"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+          <a href="https://m.me/jorgeluis.figueroaespinoza"
+            ><i class="fa-brands fa-facebook-messenger"></i
+          ></a>
+          <a href="https://api.whatsapp.com/send?phone=+59175369196"
+                ><i class="fa-brands fa-whatsapp"></i
+              ></a>
+          <a href="mailto:jlfigueroa626@gmail.com"
+            ><i class="fa-solid fa-envelope"></i
+          ></a>
+        </div>
+        <p>Todos los derechos reservados - 2023</p>
+      </footer>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
