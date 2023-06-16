@@ -1,7 +1,7 @@
 # soyfigueroa
 Mi portafolio profesional
 
-# Screenshots del Sistema de Venta - Laravel
+# Screenshort del Sistema de Venta - Laravel
 
 | Controlador screen                                |
 |-------------------------------------------------|
