@@ -1,5 +1,5 @@
 # soyfigueroa
-Mi portafolio profesional
+
 
 # Screenshort del Sistema de Venta - Laravel
 
