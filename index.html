@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<HTML lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -14,545 +14,956 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="estilo.css" />
+    <link rel="stylesheet" href="styles.css" />
     <title>JF Portafolio</title>
     <link
       rel="shortcut icon"
-      href="img/perfil_github.jpg"
+      href="images/perfil_github.jpg"
       type="image/x-icon"
     />
   </head>
 
   <body>
     <!-- SECCION I N I C I O -->
-    <section id="inicio">
-      <div class="contenido">
-        <header>
-          <div class="contenido-header">
-            <h1>/JF/</h1>
-            <nav id="nav" class="">
-              <ul id="links">
+    
+
+    <div id="header">
+      <div class="container">
+        <nav>
+          
+          <img src="" class="logo" />
+          <ul id="sidemenu">
+            <li><a href="#about">About me</a></li>
+            <li><a href="#experiences">Experiences</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#habilidades">Habilidades</a></li>
+            <li><a href="#portafolio">Portafolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+          </ul>
+          <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+          <p>Desarrollador Frontend</p>
+          <h1>Hola soy <span>Jorge</span><br />Jorge Figueroa</h1>
+          <a class="btn" href="#portafolio">Portafolio</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="about">
+      <div class="container">
+        <div class="row" style="justify-content: space-between;">
+          <div class="about-col-1">
+            <img src="images/perfil_github.jpg" />
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About Me</h1>
+            <h3 style="color: white; margin-top: 10px; margin-bottom: 10px; font-size: 20px;">Desarrollador Frontend</h3>
+            <p style="font-size: 20px;">
+              Soy una persona con la experiencia en el desarrollo de software a
+              medida, implementando una arquitectura legible y me encanta el
+              trabajo en equipo con el uso de diversas herramientas y me adapto
+              rápido a la metodología de trabajos
+            </p>
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('skills')">
+                Skills
+              </p>
+              <!-- <p class="tab-links" onclick="opentab('experience')">
+                Experencia
+              </p> -->
+              <p class="tab-links" onclick="opentab('education')">
+                Education
+              </p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
                 <li>
-                  <a
-                    href="#inicio"
-                    class="seleccionado"
-                    onclick="seleccionar(this)"
-                    >INICIO</a
-                  >
+                  <span>UI/UX</span><br />  
+                  <div>
+                    Web/application interface design
+                  </div>
                 </li>
                 <li>
-                  <a href="#sobremi" onclick="seleccionar(this)">SOBRE MI</a>
+                  <span>Web Developer</span><br />
+                  <div>
+                    Design of web application interfaces.
+                  </div>
                 </li>
                 <li>
-                  <a href="#servicios" onclick="seleccionar(this)">SERVICIOS</a>
-                </li>
-                <li>
-                  <a href="#portfolio" onclick="seleccionar(this)">PORTAFOLIO</a>
-                </li>
-                <li>
-                  <a href="#contacto" onclick="seleccionar(this)">CONTACTO</a>
+                  <span>App Developer</span><br />
+                  <div>
+                    Building apps in Flutter.
+                  </div>
                 </li>
               </ul>
-            </nav>
-
-            <!-- Icono del menu responsive -->
-            <div id="icono-nav" onclick="responsiveMenu()">
-              <i class="fa-solid fa-bars"></i>
             </div>
-
-              <a href="https://github.com/JorgeFigueroa626"
-                ><i class="fa-brands fa-github" style="color:white"></i
-              ></a>
-              <a href="https://www.linkedin.com/in/jorge-figueroa-pro/"
-                ><i class="fa-brands fa-linkedin" style="color:white"></i
-              ></a>
-
-              <a href="https://m.me/jorgeluis.figueroaespinoza"
-                ><i class="fa-brands fa-facebook-messenger" style="color:white"></i
-              ></a>
-              <a href="https://api.whatsapp.com/send?phone=75369196"
-                ><i class="fa-brands fa-whatsapp" style="color:white"></i
-              ></a>
-              <a href="mailto:jlfigueroa626@gmail.com"
-                ><i class="fa-solid fa-envelope" style="color:white"></i
-              ></a>
-           
-          </div>
-        </header>
-        <div class="presentacion">
-          <p class="bienvenida">Bienvenidos</p>
-          <h2>Soy <span>Jorge Figueroa</span>, Desarrollador Frontend</h2>
-
-          <a href="#portfolio">Ir a Portafolio</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECCION S O B R E M I -->
-    <section id="sobremi">
-      <div class="contenedor-foto">
-        <img src="img/perfil_github.jpg" alt="" />
-      </div>
-      <div class="sobremi">
-        <p class="titulo-seccion">Sobre Mi</p>
-        <h2>Hola, Soy <span>Jorge Figueroa</span></h2>
-        <h4>Desarrollador Frontend</h4>
-        <br />
-        <h4>
-          Soy una persona con la experiencia del desarrollo de un software a
-          medida y las Aplicaciónes de la arquitectura y me encanta el trabajo
-          en equipo con el uso de diversas herramientas, me adapto rápido a la
-          metodología de trabajos
-        </h4>
-
-        <a href="img/CV_Jorge_Figueroa.pdf">Descargar CV</a>
-      </div>
-    </section>
-
-    <!-- SECCION MI EXPERIENCIAS -->
-    <section id="servicios">
-      <h6 class="titulo-seccion">HABILIDADES</h6>
-      <br />
-      <h4 class="titulo-seccion">MIS EXPERIENCIAS</h4>
-      <div class="fila">
-        <div class="servicio">
-          <span class="icono"> <i class="fa-solid fa-code"></i></span>
-          <h4>Desarrollo de Frontend</h4>
-          <hr />
-          <ul class="servicios-tag">
-            <article>
-              <div>
-                <h4>HTML</h4>
-                <small>Experimentado</small>
-              </div>
-            </article>
-
-            <article>
-              <div>
-                <h4>CSS</h4>
-                <small>Intermedio</small>
-              </div>
-            </article>
-            <!-- <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li> -->
-          </ul>
-          <br />
-          <ul class="servicios-tag">
-            <!-- <li>Dart</li>
-            -->
-            <article>
-              <div>
-                <h4>JavaScript</h4>
-                <small>Experimentado</small>
-              </div>
-            </article>
-            <article>
-              <div>
-                <h4>Dart</h4>
-                <small>Experimentado</small>
-              </div>
-            </article>
-          </ul>
-           <br />
-          <ul class="servicios-tag">
-            <article>
-              <div>
-                <h4>C++</h4>
-                <small>Experimentado</small>
-              </div>
-            </article>
-
-            <article>
-              <div>
-                <h4>C#</h4>
-                <small>Intermedio</small>
-              </div>
-            </article>
-            <!-- <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li> -->
-          </ul>
-          <br />
-        </div>
-
-        <div class="servicio">
-          <span class="icono"> <i class="fa-solid fa-code"></i></span>
-          <h4>Frameword y Librerias</h4>
-          <hr />
-          <ul class="servicios-tag">
-            <article>
-              <div>
-                <h4>Laravel</h4>
-                <small>Experimentado</small>
-              </div>
-            </article>
-            <article>
-              <div>
-                <h4>Flutter</h4>
-                <small>Experimentado</small>
-              </div>
-            </article>
-            <!-- <li>Laravel</li>
-            <li>Flutter</li> -->
-          </ul>
-          <br />
-          <ul class="servicios-tag">
-            <article>
-              <div>
-                <h4>Boostrap</h4>
-                <small>Experimentado</small>
-              </div>
-            </article>
-            <article>
-              <div>
-                <h4>Angular</h4>
-                <small>Intermedio</small>
-              </div>
-            </article>
-            <!-- <li>Boostrap</li>
-            <li>React</li> -->
-          </ul>
-        </div>
-
-        <div class="servicio">
-          <span class="icono"><i class="fa-solid fa-database"></i></span>
-          <h4>Desarrollo de Backend</h4>
-          <hr />
-          <ul class="servicios-tag">
-            <article>
-              <div>
-                <h4>PHP</h4>
-                <small>Experimentado</small>
-              </div>
-            </article>
-            <article>
-              <div>
-                <h4>SQL Server</h4>
-                <small>Experimentado</small>
-              </div>
-            </article>
-            <!-- <li>PHP</li>
-            <li>SQL Server</li>
-            <li>MySQL</li> -->
-          </ul>
-          <br />
-          <ul class="servicios-tag">
-            <article>
-              <div>
-                <h4>MySQL</h4>
-                <small>Experimentado</small>
-              </div>
-            </article>
-            <article>
-              <div>
-                <h4>FIREBASE</h4>
-                <small>Intermedio</small>
-              </div>
-            </article>
-            <!-- <li>Python</li>
-            <li>Node JS</li> -->
-          </ul>
-          <br />
-          <ul class="servicios-tag">
-            <article>
-              <div>
-                <h4>Python</h4>
-                <small>Basico</small>
-              </div>
-            </article>
-            <article>
-              <div>
-                <h4>Node JS</h4>
-                <small>Intermedio</small>
-              </div>
-            </article>
-            <!-- <li>Python</li>
-            <li>Node JS</li> -->
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECCION S E R V I C I O S -->
-    <section id="servicios">
-      <h4 class="titulo-seccion">MIS SERVICIOS</h4>
-      <div class="fila">
-        <div class="servicio">
-          <span class="icono"> <i class="fa-solid fa-code"></i></span>
-          <h4>Desarrollo web</h4>
-          <hr />
-          <h5>Desarrollo de apis y Backend con Laravel.</h5>
-          <br />
-          <h5 class="mx-auto" style="width: 300px">
-            Manejo de bases de datos relacionales con SQL Server y MySQL.
-          </h5>
-          <br />
-          <h5 class="mx-auto" style="width: 270px">
-            Implementación de Servidor Web y de Correo para Linux.
-          </h5>
-          <br />
-          <h5 class="mx-auto" style="width: 270px">
-            Desarrollo de Sistemas Web para todo tipo de negocio.
-          </h5>
-          <br />
-          <h5>Asesoría en documentación de software.</h5>
-        </div>
-        <div class="servicio">
-          <span class="icono"><i class="fa-solid fa-file-code"></i></span>
-          <h4>Diseño IU/UX</h4>
-          <hr />
-          <h5 class="mx-auto" style="width: 260px">
-            Habilidad en maquetado y diseño responsive.
-          </h5>
-          <br />
-          <h5 class="mx-auto" style="width: 270px">
-            Diseño de interfaz de usuario para software de escritorio.
-          </h5>
-          <br />
-          <h5 class="mx-auto" style="width: 250px">
-            Diseño de Aplicaciónes móviles mediante Flutter.
-          </h5>
-          <br />
-          <h5 class="mx-auto" style="width: 300px">
-            Análisis, reporte y Estadística de Dato
-          </h5>
-          <br />
-          <h5 class="mx-auto" style="width: 240px">
-            Diagramas para Sistemas de software mediante UML.
-          </h5>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECCION PORTAFOLIO -->
-    <section id="portfolio">
-      <h4 class="titulo-seccion">Mis Proyectos</h4>
-      
-      <div class="fila" style="margin: 5px">
-
-        <div class="card" >
-          <img src="img/burger2.1.png" class="card__img" />
-          <h3 class="card__title">Sistema de Ventas Online - Laravel</h3>
-          <div class="cart__button">
-
-            <a href="https://github.com/JorgeFigueroa626/JorgeFigueroa626.git" class="card_cta" >GitHub</a>
-            <a href="#" class="card_cta">View</a>
+            <!-- <div class="tab-contents" id="experience">
+              <ul>
+                <li>
+                  <span>2021 - Curent</span><br />Lorem ipsum dolor sit amet.
+                </li>
+                <li>
+                  <span>2019 - 2021</span><br />Lorem ipsum dolor sit amet.
+                </li>
+                <li>
+                  <span>2017 - 2019</span><br />Lorem ipsum dolor sit amet.
+                </li>
+              </ul>
+            </div> -->
+            <div class="tab-contents" id="education">
+              <ul>
+                <li><span> 2022</span><br />Diplomado de Técnico en Sistema Informático</li>
+                <li><span> 2022</span><br />Diplomado de Técnico en Big Data</li>
+                <li><span> 2022</span><br />Diplomado de Técnico en Computo en la Nube</li>
+              </ul>
+            </div>
           </div>
         </div>
-
-        <div class="card">
-          <img src="img/Menu.png" class="card__img" />
-          <h3 class="card__title" >Sistema de Ventas - Angular 16 y .NET Core 7</h3>
-          <div class="cart__button">
-
-            <a href="https://github.com/JorgeFigueroa626/JorgeFigueroa626.git" class="card_cta" >GitHub</a>
-            <a href="#" class="card_cta">View</a>
-          </div>
-        </div>
-         
-        <div class="card">
-          <img src="img/tienda.png" class="card__img" />
-          <h3 class="card__title" >Sistema de E-commerce - BLAZOR y .NET 7</h3>
-          <div class="cart__button">
-            <a href="https://github.com/JorgeFigueroa626/JorgeFigueroa626.git"
-            class="card_cta">GitHub</a>
-            <a href="#" class="card_cta">View</a>
-          </div>
-        </div>
-
       </div>
+    </div>
 
-      <div class="fila" style="margin: 5px;">
-
-        <div class="card">
-          <img src="img/mapa.png" class="card__img" />
-          <h3 class="card__title" >Sistema de Mapas GPS - Angular</h3>
-          <div class="cart__button">
-
-            <a href="https://github.com/JorgeFigueroa626/app-mapas-angular.git"
-            class="card_cta">GitHub</a>
-            <a href="#" class="card_cta">View</a>
-          </div>
-        </div>
+    <div id="habilidades">
+      <div class="container">
+        <h1 class="sub-title">My Abilities</h1>
+        <div class="services-list">
         
-        <div class="card">
-          <img src="img/cart_img.png" class="card__img" />
-          <h3 class="card__title" >Sistema de Carrito de Compras - Angular</h3>
-          <div class="cart__button">
+          <div>
+            <i class="fa-solid fa-book"></i>
+            <h3 style="font-size: 12px;">FRONTEND DEVELOPER</h3> <br>
+            <article class="row" style="display: flex;justify-content: space-around;">
+              
+              <article class="lenguaje-left">
+                <article>
+                    <i class="fa-regular fa-circle-check" style="font-size: 15px; margin-right: 5px;"></i>Angular
+                    <p style="margin-left: 20px; margin-top: -15px;">Experimentado </p>
+                  </article><br><br>
+                  <article>
+                    <i class="fa-regular fa-circle-check" style="font-size: 15px; margin-right: 5px;"></i>RxJS
+                    <p style="margin-left: 20px; margin-top: -15px;">Intermedio </p>
+                  </article><br><br>
+                  <article>
+                    <i class="fa-regular fa-circle-check" style="font-size: 15px; margin-right: 5px;"></i>Tailwind
+                    <p style="margin-left: 20px; margin-top: -15px;">Intermedio </p>
+                  </article><br><br>
+               
+                </article><br>
 
-            <a href="https://github.com/JorgeFigueroa626/Carrito_Compra_Angular.git"
-            class="card_cta"
-            >GitHub</a>
-            <a href="#" class="card_cta">View</a>
+                <article class="lenguaje-right">
+                  <article>
+                    <i class="fa-regular fa-circle-check" style="font-size: 15px; margin-right: 5px;"></i>Flutter
+                    <p style="margin-left: 20px; margin-top: -15px;">Intermedio</p>
+                  </article><br><br>
+                  <article>
+                    <i class="fa-regular fa-circle-check" style="font-size: 15px; margin-right: 5px;"></i>Bootstrap
+                    <p style="margin-left: 20px; margin-top: -15px;">Experimentado </p>
+                  </article><br><br>
+                  <article>
+                    <i class="fa-regular fa-circle-check" style="font-size: 15px; margin-right: 5px;"></i>HTML
+                    <p style="margin-left: 20px; margin-top: -15px;">Experimentado </p>
+                  </article><br><br>
+                 
+                  
+                </article><br><br>
+              </article>
+
           </div>
-        </div>
+         
+          <div>
+            <i class="fa-solid fa-code"></i>
+            <h3 style="font-size: 12px;">LENGUAJES DOMINADOS</h3><br>
+              <article class="row" style="display: flex;justify-content: space-around;">
+                
+                <article class="lenguaje-left">
+                    <article>
+                      <i class="fa-regular fa-circle-check" style="font-size: 15px; margin-right: 5px;"></i>TypeScript
+                      <p style="margin-left: 20px; margin-top: -15px;">Experimentado</p>
+                    </article><br><br>
+                    <article>
+                      <i class="fa-regular fa-circle-check" style="font-size: 15px; margin-right: 5px;"></i>Dart
+                      <p style="margin-left: 20px; margin-top: -15px;">Experimentado</p>
+                    </article><br><br>
+                    <article>
+                      <i class="fa-regular fa-circle-check" style="font-size: 15px; margin-right: 5px;"></i>Python
+                      <p style="margin-left: 20px; margin-top: -15px;">Intermedio</p>
+                    </article><br><br>
+                  </article><br>
 
-        <div class="card">
-          <img src="img/porfolioregistroempleado.png" class="card__img" />
-          <h3 class="card__title" >Sistema de Registro de Empleados - PHP</h3>
-          <div class="cart__button">
+                  <article class="lenguaje-right">
+                    <article>
+                      <i class="fa-regular fa-circle-check" style="font-size: 15px; margin-right: 5px;"></i>JavaScript
+                      <p style="margin-left: 20px; margin-top: -15px;">Experimentado</p>
+                    </article><br><br>
+                    <article>
+                      <i class="fa-regular fa-circle-check" style="font-size: 15px; margin-right: 5px;"></i>C#
+                      <p style="margin-left: 20px; margin-top: -15px;">Intermedio</p>
+                    </article><br><br>
+                    <article>
+                      <i class="fa-regular fa-circle-check" style="font-size: 15px; margin-right: 5px;"></i>Java
+                      <p style="margin-left: 20px; margin-top: -15px;">Intermedio</p>
+                    </article><br><br>
+                  </article><br><br>
 
-            <a href="https://github.com/JorgeFigueroa626/sistema_registro_empleados.git" class="card_cta">GitHub</a>
-            <a href="#" class="card_cta">View</a>
+                </article>
+            
           </div>
+
+          <div>
+            <i class="fa-solid fa-database"></i>
+            <h3 style="font-size: 12px;">BACKEND DEVELOPER</h3> <br>
+            <article class="row" style="display: flex;justify-content: space-around;">
+                
+              <article class="lenguaje-left">
+                  <article>
+                    <i class="fa-regular fa-circle-check" style="font-size: 15px; margin-right: 5px;"></i>MySQL
+                    <p style="margin-left: 20px; margin-top: -15px;">Experimentado</p>
+                  </article><br><br>
+                  <article>
+                    <i class="fa-regular fa-circle-check" style="font-size: 15px; margin-right: 5px;"></i>SQL Server
+                    <p style="margin-left: 20px; margin-top: -15px;">Experimentado</p>
+                  </article><br><br>
+                  
+                </article><br>
+
+                <article class="lenguaje-right">
+                  <article>
+                    <i class="fa-regular fa-circle-check" style="font-size: 15px; margin-right: 5px;"></i>Node JS
+                    <p style="margin-left: 20px; margin-top: -15px;">Experimentado</p>
+                  </article><br><br>
+                  <article>
+                    <i class="fa-regular fa-circle-check" style="font-size: 15px; margin-right: 5px;"></i>FIREBASE
+                    <p style="margin-left: 20px; margin-top: -15px;">Intermedio</p>
+                  </article><br><br>
+                </article><br><br>
+                 
+
+              </article>
+          </div>
+
         </div>
       </div>
+    </div>
 
+    <div id="services">
+      <div class="container">
+        <h1 class="sub-title">My Services and Experiences</h1>
+        <div class="services-list">
+          
+          <div>
+            <i class="fa-sharp fa-solid fa-crop-simple"></i>
+            <h3 style="font-size: 12px; margin-bottom: 30px;">DESARROLLADOR WEB</h3>
 
-      <div class="fila" style="margin: 5px;">
-     
-        <div class="card">
-          <img src="img/redsocial.png" class="card__img" />
-          <h3 class="card__title" >Aplicación para una Red Social - Android</h3>
-          <div class="cart__button">
-            <a href="https://github.com/JorgeFigueroa626/JorgeFigueroa626.git" class="card_cta">GitHub</a>
-            <a href="#" class="card_cta">View</a>
+              <li style="font-size: 15px;margin-bottom: 10px;">
+                <ul style="margin-top: -18px; margin-left: 15px;">
+                  Desarrollo de Sistemas Web en Angular.
+                </ul><br>
+              </li>
+
+              <li style="font-size: 15px;margin-bottom: 10px;">
+                <ul style="margin-top: -18px; margin-left: 15px;">
+                  Desarrollo de API en Visual Studio.
+                </ul>
+              </li><br>
+
+              <li style="font-size: 15px;margin-bottom: 10px;">
+                <ul style="margin-top: -18px; margin-left: 15px;">
+                  Administración y seguridad de VPS o Hosting.
+                </ul>
+              </li><br>
+
+              <li style="font-size: 15px;margin-bottom: 10px;">
+                <ul style="margin-top: -18px; margin-left: 15px;">
+                  Implementación de Servidor Web y de Correo en Linux.
+                </ul>
+              </li><br>
+
+              <li style="font-size: 15px;margin-bottom: 10px;">
+                <ul style="margin-top: -18px; margin-left: 15px;">
+                  Manejo de base de datos relacionales con MySQL - SQL
+                </ul>
+              </li>
+            <a href="#portafolio">Lear more</a>
+          </div>
+
+          <div>
+            <i class="fa-solid fa-person-military-pointing"></i>
+            <h3 style="font-size: 12px; margin-bottom: 30px;">QA ENGUINEER</h3>
+
+              <li style="font-size: 15px;margin-bottom: 10px;">
+                <ul style="margin-top: -18px; margin-left: 15px;">
+                  Analista de control de calidad de software.
+                </ul><br>
+              </li>
+
+              <li style="font-size: 15px;margin-bottom: 10px;">
+                <ul style="margin-top: -18px; margin-left: 15px;">
+                  Automatizacion en selenium y cypress.
+                </ul>
+              </li><br>
+
+              <li style="font-size: 15px;margin-bottom: 10px;">
+                <ul style="margin-top: -18px; margin-left: 15px;">
+                  Gestión de casos de prueba manuales y automatizada.
+                </ul>
+              </li><br>
+
+              <li style="font-size: 15px;margin-bottom: 10px;">
+                <ul style="margin-top: -18px; margin-left: 15px;">
+                  Pruebas de API con Postman.
+                </ul>
+              </li><br>
+
+              <li style="font-size: 15px;margin-bottom: 10px;">
+                <ul style="margin-top: -18px; margin-left: 15px;">
+                  Implementación de casos de prueba.
+                </ul>
+              </li>
+          </div>
+
+          <div>
+            <i class="fa-solid fa-code "></i>
+            <h3 style="font-size: 12px; margin-bottom: 30px;">UI/UX DESING<h2>
+
+              <li style="font-size: 15px; margin-bottom: 10px;">
+                <ul style="margin-top: -18px; margin-left: 15px;">
+                  Habilidad en maquetado y diseño responsive.
+                </ul>
+              </li><br>
+
+              <li style="font-size: 15px; margin-bottom: 10px;">
+                <ul style="margin-top: -18px; margin-left: 15px;">
+                  Diagramas para Sistemas de software mediante UML.
+                </ul>
+              </li><br>
+
+              <li style="font-size: 15px; margin-bottom: 10px;">
+                <ul style="margin-top: -18px; margin-left: 15px;">
+                  Diseño de aplicaciones móviles mediante Flutter.
+                </ul>
+              </li><br>
+
+              <li style="font-size: 15px; margin-bottom: 10px;">
+                <ul style="margin-top: -18px; margin-left: 15px;">
+                  Diseño de interfaz de usuario para software de escritorio.
+                </ul>
+              </li><br>
+
+              <li style="font-size: 15px; margin-bottom: 10px;">
+                <ul style="margin-top: -18px; margin-left: 15px;">
+                  Redaccion de documentacion de software, con una metodología agil - SCRUM
+                </ul>
+              </li><br>
+
+            <!-- <a href="#">Lear more</a> -->
+          </div>
+
+          
+          <!-- <div>
+            <i class="fa-brands fa-app-store"></i>
+            <h2>App Desing</h2>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error
+              perferendis dolor quaerat architecto nihil, dolore omnis ratione,
+              quae, eius enim accusamus. Enim modi vel quasi!
+            </p>
+            <a href="#">Lear more</a>
+          </div> -->
+        </div>
+      </div>
+    </div>
+
+    <div id="portafolio">
+      <div class="container">
+        <h1 class="sub-title">My Portfolios</h1>
+        <div class="work-list">
+
+          <div class="work">
+            <img src="images/web_pos.4.png" />
+            <div class="layer">
+              <h2 style="margin-bottom: 5px;">Web de Registro Compras y Ventas</h2>
+              <p>Web para el registro de compras y ventas</p>
+              <div class="social-btn">
+                <button >Angular</button>
+                <button >TypeScript</button>
+                <button >Tailwind</button>
+                <button >.NET 6</button>
+                <button >C#</button>
+                <button >MySQL</button>
+              </div>
+              <a href="https://github.com/JorgeFigueroa626/JorgeFigueroa626.git" target="_blank" 
+                ><i class="fa-brands fa-github"></i
+              ></a>
+            </div>
+          </div>
+          
+          <div class="work">
+            <img src="images/Menu.0.png" />
+            <div class="layer">
+              <h2 style="margin-bottom: 5px;">Web Reportes de Ventas</h2>
+              <p>
+                Es un sistema para el reportes de ventas de productos.
+              </p>
+              <div class="social-btn">
+                <button >Angular</button>
+                <button >TypeScript</button>
+                <button >SQL Server</button>
+                <button >.Net 7</button>
+              </div>
+              <a href="https://github.com/JorgeFigueroa626/JorgeFigueroa626.git" target="_blank" 
+                ><i class="fa-brands fa-github"></i
+              ></a>
+            </div>
+          </div>
+          <div class="work">
+            <img src="images/tienda.0.png" />
+            <div class="layer">
+              <h2 style="margin-bottom: 5px;">Web de Tienda Ecommerce</h2>
+              <p>
+                Es un sistema de tienda para productos, autorizacion de acceso.
+              </p>
+              <td>
+              <div class="social-btn">
+                <button >Blazor</button>
+                <button >C#</button>
+                <button >HTML - CSS</button>
+                <button >SQL Server</button>
+                <button >.Net 7</button>
+              </div>
+              <a href="https://github.com/JorgeFigueroa626/JorgeFigueroa626.git" target="_blank" 
+              ><i class="fa-brands fa-github"></i
+                ></a>
+              </div>
           </div>
         </div>
+        <div class="work-list">
 
-     
-        <div class="card">
-          <img src="img/cartshopin.png" class="card__img" />
-          <h3 class="card__title" >Aplicación para Venta de Autos - Flutter</h3>
-          <div class="cart__button">
-            <a
-              href="https://github.com/JorgeFigueroa626/flutter_venta_autos.git"
-              class="card_cta"
-              >GitHub</a
+          <div class="work">
+            <img src="images/burger2.1.1.png" />
+            <div class="layer">
+              <h2 style="margin-bottom: 5px;">Web de Ventas</h2>
+              <p>Es un sistema para Ventas Productos de comida rapidas, con una arquitectura MVC.</p>
+              <div class="social-btn">
+                <button >Laravel</button>
+                <button >JavaScript</button>
+                <button >HTML</button>
+                <button >Bootstrap</button>
+                <button >MYSQL Server</button>
+              </div>
+              <a href="https://github.com/JorgeFigueroa626/JorgeFigueroa626.git" target="_blank" 
+                ><i class="fa-brands fa-github"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="work">
+            <img src="images/mapa.1.png" />
+            <div class="layer">
+              <h2 style="margin-bottom: 5px;">Web de Mapas - GPS</h2>
+              <p>
+                Sistema para la Ubicacion de Mapas, busquedas de lugares y direciones.
+              </p>
+              <div class="social-btn">
+                <button >Angular</button>
+                <button >TypeScript</button>
+                <button >HTML</button>
+                <button >Bootstrap</button>
+              </div>
+              <a href="https://github.com/JorgeFigueroa626/app-mapas-angular.git" target="_blank" 
+              ><i class="fa-brands fa-github"></i
+                ></a>
+              </div>
+          </div>
+
+          <div class="work">
+            <img src="images/cart_img1.0.png" />
+            <div class="layer">
+              <h2 style="margin-bottom: 5px;">Web de Carrito de Compra</h2>
+              <p>
+                Es un sistema para la Compra de productos, con una conexion a una API.
+              </p>
+              <div class="social-btn">
+                <button >Angular</button>
+                <button >TypeScript</button>
+                <button >HTML</button>
+                <button >SCSS</button>
+                <button >RxJS</button>
+              </div>
+              <a href="https://github.com/JorgeFigueroa626/Carrito_Compra_Angular.git" target="_blank" 
+                ><i class="fa-brands fa-github"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div class="work-list">
+          <div class="work">
+            <img src="images/redsocial.png" />
+            <div class="layer">
+              <h2 style="margin-bottom: 5px;">App de Red Social</h2><br>
+              <p>
+                Es una aplicacion de Red Social, Publicaiones (Likes-Comentarios), Detalles de publicacines, Chat de Mensaje, Perfil.
+              </p>
+              <div class="social-btn">
+                <button >Androind</button>
+                <button >FIREBASE</button>
+              </div>
+              <a href="https://github.com/JorgeFigueroa626/JorgeFigueroa626.git" target="_blank" 
+                ><i class="fa-brands fa-github"></i
+              ></a>
+            </div>
+          </div>
+          <div class="work">
+            <img src="images/cartshopin.png" />
+            <div class="layer">
+              <h2 style="margin-bottom: 5px;">App de Ventas Autos</h2><br>
+              <p>
+                Es una aplicacion de Ventas de Autos, Publicaiones (Favoritos-Descripcion), Detalles del Autos, links de whatsapp - llamadas.
+              </p>
+              <div class="social-btn">
+                <button >Flutter</button>
+                <button >Dart</button>
+                <button >FIREBASE</button>
+              </div>
+              <a href="https://github.com/JorgeFigueroa626/flutter_venta_autos.git" target="_blank" 
+                ><i class="fa-brands fa-github"></i
+              ></a>
+            </div>
+          </div>
+          <div class="work">
+            <img src="images/dato_clima.png" />
+            <div class="layer">
+              <h2 style="margin-bottom: 5px;">App de Datos del Clima</h2><br>
+              <p>
+                Diseño de todo tipo de aplicaciones mobiles.
+              </p>
+              <div class="social-btn">
+                <button >Flutter</button>
+                <button >Dart</button>
+                <button >API</button>
+              </div>
+              <a href="https://github.com/JorgeFigueroa626/datos_climas_flutter.git" target="_blank" 
+                ><i class="fa-brands fa-github"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <a href="#" class="btn">See more</a>
+      </div>
+    </div>
+
+
+    <!-- Historial 
+    <div class="container">
+      <h1 class="sub-title" style="margin-bottom: 30px;">My Portfolios</h1>
+      <div class="main-container">
+      <div class="teamy-team">
+        <div class="scroller">
+
+          <div class="scroller__item">
+                <div class="teamy teamy_mask-circle" aria-labelledby="person1">
+                    <div class="teamy__content" id="person1">
+                        <span class="teamy__name">Suzan Lois</span>
+                        <span class="teamy__post">Graphic Designer</span>
+                    </div>
+                    <div class="teamy__layout">
+                        <div class="teamy__front">
+                        <img
+                            src="https://images.unsplash.com/photo-1595072009558-430d78d6bf3b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=80"
+                            class="teamy__avatar"
+                            alt="Suzan Lois' photo"
+                        />
+                        </div>
+                        <div class="teamy__back">
+                            <div class="teamy__back-content">
+                                <button
+                                class="teamy__open r-button"
+                                onclick="openDialog('popup-article', this)"
+                                >
+                                <span class="button">show more</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+          </div>
+
+          <div class="scroller__item">
+            <div
+              class="teamy teamy_mask-circle teamy_zoom-photo"
+              aria-labelledby="person2"
             >
-            <a href="#" class="card_cta">View</a>
+              <div class="teamy__content" id="person2">
+                <span class="teamy__name">Dora Caelan</span>
+                <span class="teamy__post">HR-manager</span>
+              </div>
+              <div class="teamy__layout">
+                <div class="teamy__front">
+                  <img
+                    src="https://images.unsplash.com/photo-1595102298291-82c1014f413a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=80"
+                    class="teamy__avatar"
+                    alt="Dora Caelan's photo"
+                  />
+                </div>
+                <div class="teamy__back">
+                  <div class="teamy__back-content">
+                    <button
+                      class="teamy__open r-button"
+                      onclick="openDialog('popup-article', this)"
+                    >
+                      <span class="button">show more</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-
-     
-        <div class="card">
-          <img src="img/dato_clima.png" class="card__img" />
-          <h3 class="card__title" >Aplicación para Datos del Clima - Flutter</h3>
-          <div class="cart__button">
-            <a href="https://github.com/JorgeFigueroa626/datos_climas_flutter.git"
-            class="card_cta"
-            >GitHub</a
+          <div class="scroller__item">
+            <div
+              class="teamy teamy_mask-circle teamy_zoom-rotate-photo"
+              aria-labelledby="person3"
             >
-            <a href="#" class="card_cta">View</a>
+              <div class="teamy__content" id="person3">
+                <span class="teamy__name">Rosanna Pattie</span>
+                <span class="teamy__post">Illustrator</span>
+              </div>
+              <div class="teamy__layout">
+                <div class="teamy__front">
+                  <img
+                    src="https://images.unsplash.com/photo-1595205992522-bd8aee51cfbf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=80"
+                    class="teamy__avatar"
+                    alt="Rosanna Pattie's photo"
+                  />
+                </div>
+                <div class="teamy__back">
+                  <div class="teamy__back-content">
+                    <button
+                      class="teamy__open r-button"
+                      onclick="openDialog('popup-article', this)"
+                    >
+                      <span class="button">show more</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="scroller__item">
+            <div
+              class="teamy teamy_mask-circle teamy_zoom-slide-photo"
+              aria-labelledby="person4"
+            >
+              <div class="teamy__content" id="person4">
+                <span class="teamy__name">Rose Alpha</span>
+                <span class="teamy__post">Photographer</span>
+              </div>
+              <div class="teamy__layout">
+                <div class="teamy__front">
+                  <img
+                    src="https://images.unsplash.com/photo-1595169269488-02a14b7197c1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=80"
+                    class="teamy__avatar"
+                    alt="Rose Alpha's photo"
+                  />
+                </div>
+                <div class="teamy__back">
+                  <div class="teamy__back-content">
+                    <button
+                      class="teamy__open r-button"
+                      onclick="openDialog('popup-article', this)"
+                    >
+                      <span class="button">show more</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="scroller__item">
+            <div class="teamy teamy_mask-triangle" aria-labelledby="person5">
+              <div class="teamy__content" id="person5">
+                <span class="teamy__name">Tyson Amery</span>
+                <span class="teamy__post">UI designer</span>
+              </div>
+              <div class="teamy__layout">
+                <div class="teamy__front">
+                  <img
+                    src="https://images.unsplash.com/photo-1594840295384-3aad16925a4f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=80"
+                    class="teamy__avatar"
+                    alt="Tyson Amery's photo"
+                  />
+                </div>
+                <div class="teamy__back">
+                  <div class="teamy__back-content">
+                    <button
+                      class="teamy__open r-button"
+                      onclick="openDialog('popup-article', this)"
+                    >
+                      <span class="button">show more</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="scroller__item">
+            <div
+              class="teamy teamy_mask-triangle teamy_zoom-photo"
+              aria-labelledby="person6"
+            >
+              <div class="teamy__content" id="person6">
+                <span class="teamy__name">Stas Melnikov</span>
+                <span class="teamy__post">UI developer</span>
+              </div>
+              <div class="teamy__layout">
+                <div class="teamy__front">
+                  <img
+                    src="https://images.unsplash.com/photo-1594317124627-9e961fc42ec1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=80"
+                    class="teamy__avatar"
+                    alt="Stas Melnikov's photo"
+                  />
+                </div>
+                <div class="teamy__back">
+                  <div class="teamy__back-content">
+                    <button
+                      class="teamy__open r-button"
+                      onclick="openDialog('popup-article', this)"
+                    >
+                      <span class="button">show more</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="scroller__item">
+            <div
+              class="teamy teamy_mask-triangle teamy_zoom-rotate-photo"
+              aria-labelledby="person7"
+            >
+              <div class="teamy__content" id="person7">
+                <span class="teamy__name">Lise Laurie</span>
+                <span class="teamy__post">Photomodel</span>
+              </div>
+              <div class="teamy__layout">
+                <div class="teamy__front">
+                  <img
+                    src="https://images.unsplash.com/photo-1594441097885-75085c837807?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=80"
+                    class="teamy__avatar"
+                    alt="Lise Laurie's photo"
+                  />
+                </div>
+                <div class="teamy__back">
+                  <div class="teamy__back-content">
+                    <button
+                      class="teamy__open r-button"
+                      onclick="openDialog('popup-article', this)"
+                    >
+                      <span class="button">show more</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="scroller__item">
+            <div
+              class="teamy teamy_mask-triangle teamy_zoom-slide-photo"
+              aria-labelledby="person8"
+            >
+              <div class="teamy__content" id="person8">
+                <span class="teamy__name">Effie Eleanora</span>
+                <span class="teamy__post">Web-designer</span>
+              </div>
+              <div class="teamy__layout">
+                <div class="teamy__front">
+                  <img
+                    src="https://images.unsplash.com/photo-1568923066121-fb6216cf26f3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=80"
+                    class="teamy__avatar"
+                    alt="Effie Eleanora's photo"
+                  />
+                </div>
+                <div class="teamy__back">
+                  <div class="teamy__back-content">
+                    <button
+                      class="teamy__open r-button"
+                      onclick="openDialog('popup-article', this)"
+                    >
+                      <span class="button">show more</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-
       </div>
-    </section>
-
-    <!-- SECCION H A B I L I D A D E S -->
-    <section id="#contacto">
-      <div class="contenedor-skills" id="skills">
-        <h4 class="titulo-seccion">LENGUAJES DE PROGRAMACION</h4>
-        <div class="skill">
-          <div class="info">
-            <p><i class="lista fa-brands fa-html5"></i> HTML</p>
-            <span class="porcentaje">95%</span>
+    </div>
+    <div
+      id="popup-article"
+      role="dialog"
+      aria-labelledby="dialog_title"
+      aria-modal="true"
+    >
+      <div class="popup">
+        <div class="popup__container">
+          <div class="popup__content">
+            <h2 id="dialog_title">About me</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam
+              eaque optio vitae in explicabo recusandae sit id sapiente
+              excepturi tempore, nemo, nulla odio deleniti rerum nisi
+              perferendis aut molestias! Incidunt nesciunt iusto praesentium! In
+              at maiores quibusdam enim quis, quam!
+            </p>
+            <div class="widget">
+              <a
+                href="https://cssisntmagic.substack.com/"
+                class="r-link"
+                target="_top"
+              >
+                <span class="button"
+                  >Subscribe on my email newsletter with CSS tips</span
+                >
+              </a>
+            </div>
+            <p>
+              Architecto magni dolores cumque tenetur nemo id aperiam, ratione
+              temporibus at, consectetur totam, fuga et illo rerum earum dicta.
+              Vitae ullam harum enim aliquid hic commodi voluptas cumque iste ex
+              accusantium architecto doloremque reprehenderit, asperiores vero
+              dolor, esse inventore dolorem.
+            </p>
+            <p>
+              Excepturi eaque, reprehenderit dolores, cum molestias repellendus
+              in expedita. Placeat totam, quos pariatur quidem explicabo id
+              harum ab voluptatum. Necessitatibus, aliquam! Dolorum voluptatem
+              ut laudantium excepturi cumque, hic iure impedit ullam accusantium
+              error natus recusandae, quia fuga quo voluptates officiis?
+            </p>
+            <p>
+              Dignissimos debitis eos necessitatibus accusantium natus
+              voluptates illo blanditiis corporis minus. Repudiandae libero
+              quae, illo error expedita consectetur possimus voluptate eum esse
+              quam molestiae tempore dignissimos ipsam similique ab quod. Ea
+              earum adipisci rem voluptatem aliquid voluptatum deleniti
+              necessitatibus provident.
+            </p>
+            <p>
+              Dicta eum amet impedit maiores accusamus numquam saepe
+              necessitatibus temporibus ut! Velit ducimus repellendus fuga
+              repudiandae culpa voluptatibus delectus praesentium totam odit
+              ratione, tenetur assumenda, labore esse et nostrum a, aut
+              veritatis. Nihil, voluptas, impedit? Magnam dolorum, iure
+              repellendus vitae.
+            </p>
+            <p>
+              Temporibus voluptatum voluptatibus iste, nam atque dignissimos
+              quam labore sequi adipisci tempore exercitationem quos, libero,
+              reprehenderit facere quasi soluta, itaque at eum cum possimus!
+              Facilis, tempora soluta at quis. Nemo expedita voluptate esse nam
+              ex odit, sequi eveniet quibusdam, dolores?
+            </p>
+            <p>
+              Praesentium laboriosam iste dolore cumque voluptatibus deleniti
+              quia, delectus provident, illum aperiam, atque molestiae. Cum
+              delectus, doloribus expedita eius veritatis assumenda deleniti
+              veniam reprehenderit animi ut, eaque asperiores, dicta incidunt
+              omnis repellendus dolorum enim inventore rerum voluptatem saepe
+              error id.
+            </p>
           </div>
-
-          <div class="barra">
-            <div class="" id="html"></div>
-          </div>
-        </div>
-        <div class="skill">
-          <div class="info">
-            <p><i class="lista fa-brands fa-css3"></i> Css</p>
-            <span class="porcentaje">85%</span>
-          </div>
-
-          <div class="barra">
-            <div class="" id="ps"></div>
-          </div>
-        </div>
-        <div class="skill">
-          <div class="info">
-            <p><i class="lista fa-brands fa-js"></i> Javascript - Typescript</p>
-            <span class="porcentaje">85%</span>
-          </div>
-
-          <div class="barra">
-            <div class="" id="js"></div>
-          </div>
-        </div>
-
-        <div class="skill">
-          <div class="info">
-            <p><i class="lista fa-brands fa-php"></i> PHP</p>
-            <span class="porcentaje">90%</span>
-          </div>
-
-          <div class="barra">
-            <div class="" id="ph"></div>
-          </div>
-        </div>
-
-        <div class="skill">
-          <div class="info">
-            <p><i class="lista fa-solid fa-cube"></i> Dart</p>
-            <span class="porcentaje">90%</span>
-          </div>
-
-          <div class="barra">
-            <div class="porcentaje" id="dr"></div>
-          </div>
-        </div>
-
-        <div class="skill">
-          <div class="info">
-            <p><i class="lista fa-brands fa-laravel"></i> Flutter - Angular - Laravel</p>
-            <span class="porcentaje">85%</span>
-          </div>
-
-          <div class="barra">
-            <div class="porcentaje" id="fr"></div>
-          </div>
-        </div>
-
-        <div class="skill">
-          <div class="info">
-            <p><i class="lista fa-solid fa-database"></i> MySQL - SQL Server</p>
-            <span class="porcentaje">90%</span>
-          </div>
-          <div class="barra">
-            <div class="" id="bd"></div>
-          </div>
-        </div>
-      </div>
-
-      <!-- SECCION FOOTER -->
-      <footer>
-        <br />
-        <nav class="redes">
-          <a href="#inicio" class="seleccionado" onclick="seleccionar(this)"
-            >INICIO</a
+          <button
+          
+            class="r-button popup__close"
+            onclick="closeDialog(this)"
           >
-          <a href="#sobremi" onclick="seleccionar(this)">SOBRE MI</a>
-          <a href="#servicios" onclick="seleccionar(this)">SERVICIOS</a>
-          <a href="#portfolio" onclick="seleccionar(this)">PORTFOLIO</a>
-          <a href="#contacto" onclick="seleccionar(this)">CONTACTO</a>
-        </nav>
-        <br />
-      
-          <a href="https://github.com/JorgeFigueroa626"
-            ><i class="fa-brands fa-github"></i
-          ></a>
-          <a href="https://www.linkedin.com/in/jorge-figueroa-pro/"
-            ><i class="fa-brands fa-linkedin"></i
-          ></a>
-          <a href="https://m.me/jorgeluis.figueroaespinoza"
-            ><i class="fa-brands fa-facebook-messenger"></i
-          ></a>
-          <a href="https://api.whatsapp.com/send?phone=+59175369196"
+            <span class="popup__close-text">close</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    </div-->
+
+    <div id="contact">
+      <div class="container" style="margin-top: 30px;">
+        <div class="row">
+          <div class="contact-left">
+            <h1 class="sub-title">Contact Me</h1>
+            <p><i class="fa-solid fa-paper-plane"></i>jlfiguero626@gmail.com</p>
+            <div class="social-icons">
+              <a href="https://github.com/JorgeFigueroa626" target="_blank" > 
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a href="mailto:jlfigueroa626@gmail.com" target="_blank" >
+                <i class="fa-solid fa-envelope"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/jorge-figueroa-pro/" target="_blank" >
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+              <a href="https://api.whatsapp.com/send?phone=75369196" target="_blank" 
                 ><i class="fa-brands fa-whatsapp"></i
               ></a>
-          <a href="mailto:jlfigueroa626@gmail.com"
-            ><i class="fa-solid fa-envelope"></i
-          ></a>
-        <p>Todos los derechos reservados - 2023</p>
-      </footer>
-    </section>
+            </div>
+            <a href="images/CV_Jorge_Figueroa_Espinoza.pdf" download class="btn btn2" target="_blank" 
+              >Download CV</a
+            >
+          </div>
+          
+          <!-- <div class="contact-right">
+            <form>
+              <input type="text" name="Name" placeholder="Your Name" required />
+              <input
+                type="email"
+                name="email"
+                placeholder="your email"
+                required
+              />
+              <textarea name="Message" rows="6" cols="your Message"></textarea>
+              <button type="submit" class="btn btn2">Submit</button>
+            </form>
+          </div> -->
+  
+            <div class="about-col-1">
+              <img src="images/perfil_github.jpg" />
+            </div>
 
-    <script src="script.js"></script>
+
+        </div>
+      </div>
+      <div class="copyright">
+        <p>
+          Copyright @ Jorge Figueroa.
+        </p>
+      </div>
+    </div>
+
+    <script>
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+
+      function opentab(tabname) {
+        for (tablink of tablinks) {
+          tablink.classList.remove("active-link");
+        }
+
+        for (tabcontent of tabcontents) {
+          tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+    </script>
+
+    <script>
+      var sidemeu = document.getElementById("sidemenu");
+
+      function openmenu() {
+        sidemeu.style.right = "0";
+      }
+
+      function closemenu() {
+        sidemeu.style.right = "-200px";
+      }
+    </script>
+    <script></script>
   </body>
 </html>
